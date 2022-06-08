@@ -1,0 +1,8 @@
+description("核心包")
+
+dependencies {
+    api project(":mqtt-assistant-annotation")
+
+    implementation("org.springframework.boot:spring-boot-autoconfigure")
+    implementation("org.springframework.integration:spring-integration-mqtt:${depVersion.mqtt}")
+}

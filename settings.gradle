@@ -1,0 +1,6 @@
+rootProject.name = 'mqtt-assistant'
+
+include 'mqtt-assistant-core'
+include 'mqtt-assistant-boot-starter'
+include 'mqtt-assistant-annotation'
+

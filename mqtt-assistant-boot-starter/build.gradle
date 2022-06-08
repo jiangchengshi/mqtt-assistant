@@ -1,0 +1,7 @@
+description("Starter")
+
+dependencies {
+    api project(":mqtt-assistant-core")
+
+    implementation("org.springframework.boot:spring-boot-autoconfigure")
+}

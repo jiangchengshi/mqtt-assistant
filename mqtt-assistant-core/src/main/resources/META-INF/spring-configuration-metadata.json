@@ -1,0 +1,70 @@
+{
+  "groups": [
+    {
+      "name": "mqtt",
+      "sourceType": "cool.doudou.mqtt.assistant.core.properties.MqttProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "mqtt.server-uri",
+      "type": "java.lang.String",
+      "description": "服务Uri",
+      "sourceType": "cool.doudou.mqtt.assistant.core.properties.MqttProperties",
+      "defaultValue": "tcp://127.0.0.1:1883"
+    },
+    {
+      "name": "mqtt.username",
+      "type": "java.lang.String",
+      "description": "用户名",
+      "sourceType": "cool.doudou.mqtt.assistant.core.properties.MqttProperties",
+      "defaultValue": "admin"
+    },
+    {
+      "name": "mqtt.password",
+      "type": "java.lang.String",
+      "description": "密码",
+      "sourceType": "cool.doudou.mqtt.assistant.core.properties.MqttProperties",
+      "defaultValue": "1234.abcd"
+    },
+    {
+      "name": "mqtt.client-id",
+      "type": "java.lang.String",
+      "description": "客户端ID",
+      "sourceType": "cool.doudou.mqtt.assistant.core.properties.MqttProperties",
+      "defaultValue": "${UUID}"
+    },
+    {
+      "name": "mqtt.topics",
+      "type": "java.lang.String[]",
+      "description": "订阅主题",
+      "sourceType": "cool.doudou.mqtt.assistant.core.properties.MqttProperties"
+    },
+    {
+      "name": "mqtt.qos",
+      "type": "java.lang.Integer",
+      "description": "QOS",
+      "sourceType": "cool.doudou.mqtt.assistant.core.properties.MqttProperties",
+      "defaultValue": 0
+    }
+  ],
+  "hints": [
+    {
+      "name": "mqtt.qos",
+      "values": [
+        {
+          "value": 0,
+          "description": "At most once，至多一次"
+        },
+        {
+          "value": 1,
+          "description": "At least once，至少一次"
+        },
+        {
+          "value": 2,
+          "description": "Exactly once，确保只有一次"
+        }
+      ]
+    }
+  ]
+}
