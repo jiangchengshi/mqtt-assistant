@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-cool.doudou.mqtt.assistant.core.auto.configuration.MqttAutoConfiguration
+cool.doudou.mqtt.assistant.boot.starter.auto.configuration.MqttAutoConfiguration
