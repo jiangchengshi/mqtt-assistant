@@ -1,7 +1,7 @@
 # 欢迎使用 Mqtt-Assistant
 
-[![Maven Central](https://img.shields.io/badge/Maven-v1.0.1-blue)](https://search.maven.org/search?q=g:cool.doudou%20a:mqtt-assistant-*)
-[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Maven](https://img.shields.io/badge/Maven-v1.0.1-blue)](https://search.maven.org/search?q=g:cool.doudou%20a:mqtt-assistant-*)
+[![License](https://img.shields.io/badge/License-Apache%202-4EB1BA.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0)
 
 
 ## 简介
@@ -77,7 +77,7 @@ public class MqttComponent {
 }
 ```
 
-> 消息发送：依赖注入 MqHelper，调用 send(String topic, String payload) 方法
+> 消息发送：依赖注入 MqHelper，调用 send(String topic, byte[] payload) 方法
 
 ```java
 
