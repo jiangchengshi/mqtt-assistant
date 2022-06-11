@@ -1,12 +1,26 @@
+# 欢迎使用 Mqtt-Assistant
+
+[![Maven](https://img.shields.io/badge/Maven-v1.0.1-blue)](https://search.maven.org/search?q=g:cool.doudou%20a:mqtt-assistant-*)
+[![License](https://img.shields.io/badge/License-Apache%202-4EB1BA.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0)
+
+
+## 简介
+
+Mqtt助手 - 简化配置，注解带飞！
+
+## 特点
+
+> 无侵入：基于spring-integration-mqtt包，没有改变任何框架结构，只为简化
+> 易用性：简单注解，即可进行协议通信
+> 配置灵活
+
+## 使用指引
+
 ### 引入依赖
 
 ```kotlin
 implementation("cool.doudou:mqtt-assistant:latest")
 ```
-
-> Latest
-> Version: [![Maven Central](https://img.shields.io/badge/Maven-v1.0.0-blue)](https://search.maven.org/search?q=g:cool.doudou%20a:mqtt-assistant-*)
-
 
 ### MQTT配置
 
@@ -63,7 +77,7 @@ public class MqttComponent {
 }
 ```
 
-> 消息发送：依赖注入 MqHelper，调用 send(String topic, String payload) 方法
+> 消息发送：依赖注入 MqHelper，调用 send(String topic, byte[] payload) 方法
 
 ```java
 
@@ -84,6 +98,12 @@ public class MqttComponent {
 }
 ```
 
-### 鼓励一下，喝杯咖啡
+## 版权
+
+[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+
+## 鼓励一下，喝杯咖啡
+
+> 欢迎提出宝贵意见，不断完善 Mqtt-Assistant
 
 ![鼓励一下，喝杯咖啡](https://user-images.githubusercontent.com/21210629/172556529-544b2581-ea34-4530-932b-148198b1b265.jpg)
