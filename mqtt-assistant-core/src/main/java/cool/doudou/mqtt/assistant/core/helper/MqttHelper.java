@@ -42,7 +42,25 @@ public class MqttHelper {
             mqttGatewayHandler.send(topic, payload);
             return true;
         } catch (Exception e) {
-            log.error("send topic[{}] payload[{}] exception: ", topic, payload, e);
+            log.error("send topic[{}],payload[{}] exception: ", topic, payload, e);
+        }
+        return false;
+    }
+
+    /**
+     * 发送
+     *
+     * @param topic   主题
+     * @param pos     QOS
+     * @param payload 数据载荷
+     * @return
+     */
+    public boolean send(String topic, int pos, byte[] payload) {
+        try {
+            mqttGatewayHandler.send(topic, pos, payload);
+            return true;
+        } catch (Exception e) {
+            log.error("send topic[{}],pos[{}],payload[{}] exception: ", topic, pos, payload, e);
         }
         return false;
     }
