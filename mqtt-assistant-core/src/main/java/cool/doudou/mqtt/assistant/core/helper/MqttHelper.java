@@ -53,7 +53,7 @@ public class MqttHelper {
      * @param topic   主题
      * @param pos     QOS
      * @param payload 数据载荷
-     * @return
+     * @return true-成功；false-失败
      */
     public boolean send(String topic, int pos, byte[] payload) {
         try {
