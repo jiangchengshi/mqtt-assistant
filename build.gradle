@@ -2,9 +2,9 @@
 buildscript {
     ext {
         depVersion = [
-                springBoot: "2.6.3",
-                mqtt      : "5.5.9",
-                lombok    : "1.18.22"
+                springBoot: "2.7.2",
+                mqtt      : "5.5.14",
+                lombok    : "1.18.24"
         ]
     }
 
@@ -24,7 +24,7 @@ buildscript {
 
 allprojects {
     group = "cool.doudou"
-    version = "1.0.1"
+    version = "1.0.2"
 }
 
 // 子模块配置
