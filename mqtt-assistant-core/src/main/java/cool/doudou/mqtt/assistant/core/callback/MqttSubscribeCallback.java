@@ -13,5 +13,5 @@ public interface MqttSubscribeCallback {
      * @param topic   订阅主题
      * @param payload 负载数据
      */
-    void messageArrived(String topic, byte[] payload);
+    void messageArrived(String topic, Object payload);
 }

@@ -43,7 +43,7 @@ public class MqttConfig {
         options.setPassword(mqttProperties.getPassword().toCharArray());
         factory.setConnectionOptions(options);
 
-        log.info("common-mqtt: serverUri[{}],clientId[{}]", mqttProperties.getServerUri(), mqttProperties.getClientId());
+        log.info("mqtt: serverUri[{}],clientId[{}]", mqttProperties.getServerUri(), mqttProperties.getClientId());
 
         return factory;
     }

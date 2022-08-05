@@ -77,7 +77,7 @@ public class MqttMessageHandler {
                 log.error("handler: topic is null");
             } else {
                 // 数据载荷
-                byte[] payload = (byte[]) message.getPayload();
+                Object payload = message.getPayload();
 
                 // Handler
                 MqttSubscribeCallback callback = ConcurrentMapFactory.getCallback(topic);
