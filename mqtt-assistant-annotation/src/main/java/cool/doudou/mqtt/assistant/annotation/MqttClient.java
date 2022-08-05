@@ -17,5 +17,5 @@ public @interface MqttClient {
     /**
      * @return 回调消息主题
      */
-    String[] topics();
+    String[] topics() default {};
 }

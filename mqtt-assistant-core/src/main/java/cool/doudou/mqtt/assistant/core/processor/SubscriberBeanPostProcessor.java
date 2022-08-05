@@ -27,8 +27,8 @@ public class SubscriberBeanPostProcessor implements BeanPostProcessor {
         Arrays.stream(bean.getClass().getDeclaredMethods())
                 .filter((method) -> method.isAnnotationPresent(MqttSubscriber.class))
                 .forEach((method) -> {
-                    MqttSubscriber mqttClient = method.getAnnotation(MqttSubscriber.class);
-                    initMethod(mqttClient.topics(), topics, bean, method);
+                    MqttSubscriber mqttSubscriber = method.getAnnotation(MqttSubscriber.class);
+                    initMethod(mqttSubscriber.topics(), topics, bean, method);
                 });
         return bean;
     }
