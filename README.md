@@ -1,8 +1,7 @@
 # 欢迎使用 Mqtt-Assistant
 
-[![Maven](https://img.shields.io/badge/Maven-v1.0.2-blue)](https://search.maven.org/search?q=g:cool.doudou%20a:mqtt-assistant-*)
+[![Maven](https://img.shields.io/badge/Maven-v1.0.3-blue)](https://search.maven.org/search?q=g:cool.doudou%20a:mqtt-assistant-*)
 [![License](https://img.shields.io/badge/License-Apache%202-4EB1BA.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0)
-
 
 ## 简介
 
@@ -10,14 +9,14 @@ Mqtt助手 - 简化配置，注解带飞！
 
 ## 特点
 
-> 基于spring-integration-mqtt包，没有改变任何框架结构，只为简化开发；配置灵活，简单注解，即可进行协议通信  
+> 基于spring-integration-mqtt包，没有改变任何框架结构，只为简化开发；配置灵活，简单注解，即可进行协议通信
 
 ## 使用指引
 
 ### 引入依赖
 
 ```kotlin
-implementation("cool.doudou:mqtt-assistant:latest")
+implementation("cool.doudou:mqtt-assistant-boot-starter:latest")
 ```
 
 ### MQTT配置
@@ -75,7 +74,7 @@ public class MqttComponent {
 }
 ```
 
-> 消息发送：依赖注入 MqHelper，调用 send(String topic, byte[] payload) 方法
+> 消息发送：依赖注入 MqHelper
 
 ```java
 
@@ -84,14 +83,15 @@ public class MqttComponent {
 public class MqttComponent {
     private MqttHelper mqttHelper;
 
-    /**
-     * 消息发送
-     * @param topic 发送主题
-     * @param payload 数据载荷
-     */
-    public void test(String topic, byte[] payload) {
-        boolean sendFlag = mqttHelper.send("celery-send", payload);
-        System.out.println("send: " + sendFlag);
+    public void test() {
+        // 发送 byte数组
+        byte[] byteArr = new byte[]{0x01, 0x02};
+        boolean sendFlag1 = mqttHelper.send("celery", byteArr);
+        System.out.println("send: " + sendFlag1);
+
+        // 发送 字符串
+        boolean sendFlag2 = mqttHelper.send("celery", "您好");
+        System.out.println("send: " + sendFlag2);
     }
 }
 ```
